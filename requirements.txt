@@ -1,0 +1,21 @@
+# Data Wrangling and Array Math
+numpy==2.2.6
+pandas==2.3.3
+
+# GEO Data Acquisition
+GEOparse==2.0.4
+
+# Genomics & Bioinformatics Pipelines
+gseapy==1.2.1
+
+# Statistical Modeling & Differential Expression
+statsmodels==0.14.6
+scipy==1.15.3
+
+# Clinical Survival Analysis
+lifelines==0.30.0
+
+# Data Visualization & Plotting
+matplotlib==3.10.9
+seaborn==0.13.2
+
