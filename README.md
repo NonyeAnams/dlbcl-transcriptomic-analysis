@@ -2,27 +2,35 @@
 
 An end-to-end reproducible bioinformatics pipeline built in Python to process microarray expression data, identify differentially expressed transcripts, perform pathway enrichment mapping, and model clinical time-to-event risk using public datasets.
 
-**Dataset:** GEO GSE10846
-**Platform:** Affymetrix Human Genome U133 Plus 2.0 Array (GPL570)
-**Cohort analyzed:** 200 R-CHOP treated DLBCL patients
+* **Dataset:** GEO GSE10846
+* **Platform:** Affymetrix Human Genome U133 Plus 2.0 Array (GPL570)
+* **Cohort analyzed:** 200 R-CHOP treated DLBCL patients
 
 
 ## Abstract
 
-**Background:** Diffuse Large B-Cell Lymphoma (DLBCL) exhibits profound molecular heterogeneity, marked by distinct cell-of-origin phenotypes including Activated B-Cell-like (ABC) and Germinal Center B-Cell-like (GCB) subtypes. While R-CHOP stands as the standard therapeutic intervention, clinical outcomes vary dramatically across these groups. 
+**Background:** 
 
-**Methods:** An end-to-end reproducible pipeline was built in Python using public microarray expression profiles from GEO Series GSE10846 (N=200 R-CHOP treated patients). Transcripts were aggregated using mean probe intensities, and unsupervised global variance profiles were mapped using Principal Component Analysis (PCA). Supervised differential expression testing was conducted via parallel Ordinary Least Squares (OLS) modeling with Benjamini-Hochberg False Discovery Rate (FDR) adjustments. Biological programs were determined using Over-Representation Analysis (ORA) and Gene Set Enrichment Analysis (GSEA). Clinical outcome correlation was modeled using non-parametric Kaplan-Meier estimation and semi-parametric Multivariate Cox Proportional Hazards regression. 
+Diffuse Large B-Cell Lymphoma (DLBCL) exhibits profound molecular heterogeneity, marked by distinct cell-of-origin phenotypes including Activated B-Cell-like (ABC) and Germinal Center B-Cell-like (GCB) subtypes. While R-CHOP stands as the standard therapeutic intervention, clinical outcomes vary dramatically across these groups. 
 
-**Results:** Supervised statistical modeling revealed 4,901 significantly dysregulated transcripts (FDR < 0.05), with canonical markers (*BCL6*, *MME*, *SERPINA9*) overexpressed in GCB and inflammatory/activation network markers (*BATF*, *IRF4*) elevated in ABC. GSEA mapped systemic pathobiological programs driving the aggressive ABC state to MYC targets, IL-6/JAK/STAT3 signaling, and Interferon-Gamma (IFN-γ) responses. Whole-cohort survival models implicated both MYC and IFN-γ pathway scores as univariate liabilities. However, subtype-stratified Kaplan-Meier analysis uncovered a molecular paradox: higher IFN-γ signaling confers a significant survival benefit within the GCB subtype ($p=0.0468$) but breaks down into non-significance within ABC ($p=0.4312$). Final multivariate Cox regression resolved this relationship, suggesting that the individual pathway signatures are heavily confounded by underlying disease epidemiology. Controlling for covariates isolated the binary cell-of-origin subtype as the dominant independent predictor, with the ABC entity conferring a striking 4.34-fold increase in risk of mortality ($p=0.0062$). 
+**Methods:** 
 
-**Conclusions:** This project establishes a robust, reproducible multi-stage computational framework linking raw transcriptomic feature metrics to macroscopic pathway architecture and definitive, stratified clinical hazard outcomes.
+An end-to-end reproducible pipeline was built in Python using public microarray expression profiles from GEO Series GSE10846 (N=200 R-CHOP treated patients). Transcripts were aggregated using mean probe intensities, and unsupervised global variance profiles were mapped using Principal Component Analysis (PCA). Supervised differential expression testing was conducted via parallel Ordinary Least Squares (OLS) modeling with Benjamini-Hochberg False Discovery Rate (FDR) adjustments. Biological programs were determined using Over-Representation Analysis (ORA) and Gene Set Enrichment Analysis (GSEA). Clinical outcome correlation was modeled using non-parametric Kaplan-Meier estimation and semi-parametric Multivariate Cox Proportional Hazards regression. 
+
+**Results:** 
+
+Supervised statistical modeling revealed 4,901 significantly dysregulated transcripts (FDR < 0.05), with canonical markers (*BCL6*, *MME*, *SERPINA9*) overexpressed in GCB and inflammatory/activation network markers (*BATF*, *IRF4*) elevated in ABC. GSEA mapped systemic pathobiological programs driving the aggressive ABC state to MYC targets, IL-6/JAK/STAT3 signaling, and Interferon-Gamma (IFN-γ) responses. Whole-cohort survival models implicated both MYC and IFN-γ pathway scores as univariate liabilities. However, subtype-stratified Kaplan-Meier analysis uncovered a molecular paradox: higher IFN-γ signaling confers a significant survival benefit within the GCB subtype ($p=0.0468$) but breaks down into non-significance within ABC ($p=0.4312$). Final multivariate Cox regression resolved this relationship, suggesting that the individual pathway signatures are heavily confounded by underlying disease epidemiology. Controlling for covariates isolated the binary cell-of-origin subtype as the dominant independent predictor, with the ABC entity conferring a striking 4.34-fold increase in risk of mortality ($p=0.0062$). 
+
+**Conclusions:** 
+
+This project establishes a robust, reproducible multi-stage computational framework linking raw transcriptomic feature metrics to macroscopic pathway architecture and definitive, stratified clinical hazard outcomes.
 
 
 ## Key Analytical Outputs
 
-![Volcano Plot](../results/figures/volcano_plot_rchop.png)
-![Leading-Edge Heatmap](../results/figures/ifn_heatmap.png)
-![Risk Stratified KM Curve](../results/figures/KM_table_risk_stratified.png)
+![Volcano Plot](results/figures/volcano_plot_rchop.png)
+![Leading-Edge Heatmap](results/figures/ifn_heatmap.png)
+![Risk Stratified KM Curve](results/figures/KM_table_risk_stratified.png)
 
 
 ## Key Findings
