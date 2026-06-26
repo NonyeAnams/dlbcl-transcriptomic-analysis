@@ -27,11 +27,13 @@ This project establishes a robust, reproducible multi-stage computational framew
 
 
 ## Key Analytical Outputs
-
-![Volcano Plot](results/figures/volcano_plot_rchop.png)
-![Leading-Edge Heatmap](results/figures/ifn_heatmap.png)
-![Risk Stratified KM Curve](results/figures/KM_table_risk_stratified.png)
-
+<table>
+  <tr>
+    <td><img src="results/figures/volcano_plot_rchop.png" width="300"/></td>
+    <td><img src="results/figures/ifn_heatmap.png" width="300"/></td>
+    <td><img src="results/figures/KM_table_risk_stratified.png" width="300"/></td>
+  </tr>
+</table>
 
 ## Key Findings
 
